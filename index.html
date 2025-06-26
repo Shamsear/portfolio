@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shamsear Ebrahim - Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4a6bff',
+                        'primary-dark': '#3a5bef',
+                        secondary: '#6c757d',
+                        dark: '#212529',
+                        light: '#f8f9fa'
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in-down': 'fadeInDown 1s ease-out forwards',
+                        'fade-in-up': 'fadeInUp 1s ease-out forwards',
+                        'pulse-slow': 'pulse 3s infinite',
+                        'bounce-slow': 'bounce 2s infinite',
+                        'slide-in-right': 'slideInRight 0.5s ease-out forwards',
+                        'slide-in-left': 'slideInLeft 0.5s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInDown: {
+                            '0%': { opacity: '0', transform: 'translateY(-20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        slideInRight: {
+                            '0%': { transform: 'translateX(100%)', opacity: '0' },
+                            '100%': { transform: 'translateX(0)', opacity: '1' }
+                        },
+                        slideInLeft: {
+                            '0%': { transform: 'translateX(-100%)', opacity: '0' },
+                            '100%': { transform: 'translateX(0)', opacity: '1' }
+                        }
+                    }
+                }
+            },
+            darkMode: 'class'
+        }
+    </script>
+    <style>
+        /* Custom animation delay classes */
+        .animation-delay-300 {
+            animation-delay: 300ms;
+        }
+        .animation-delay-500 {
+            animation-delay: 500ms;
+        }
+        .animation-delay-700 {
+            animation-delay: 700ms;
+        }
+        .animation-delay-1000 {
+            animation-delay: 1000ms;
+        }
+    </style>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="bg-white/90 backdrop-blur-sm">
+        <div class="container">
+            <nav>
+                <div class="logo relative">
+                    Shamsear
+                    <span class="absolute -bottom-1 left-0 w-1/2 h-1 bg-primary rounded-full"></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active hover:text-primary transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full">Home</a></li>
+                    <li><a href="#about" class="hover:text-primary transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full">About</a></li>
+                    <li><a href="#education" class="hover:text-primary transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full">Education</a></li>
+                    <li><a href="#skills" class="hover:text-primary transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full">Skills</a></li>
+                    <li><a href="#projects" class="hover:text-primary transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full">Projects</a></li>
+                    <li><a href="#contact" class="hover:text-primary transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="animate-fade-in-down">Hi, I'm <span class="highlight">Shamsear Ebrahim</span></h1>
+                <h2 class="animate-fade-in-down animation-delay-300">Data Analyst</h2>
+                <p class="animate-fade-in-down animation-delay-500">I transform complex datasets into actionable insights</p>
+                <div class="cta-buttons animate-fade-in-up animation-delay-700">
+                    <a href="#contact" class="btn primary-btn">Contact Me</a>
+                    <a href="#projects" class="btn secondary-btn">View My Work</a>
+                </div>
+                <div class="social-links animate-fade-in-up animation-delay-1000">
+                    <a href="https://github.com/Shamsear" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/shamsear/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden">
+            <svg class="relative block w-full h-12 md:h-16" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="fill-white"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about relative">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-image animate-slide-in-left">
+                    <div class="image-container">
+                        <img src="assets/images/placeholder.svg" alt="Profile Picture">
+                        <div class="absolute -bottom-3 -right-3 w-20 h-20 bg-primary rounded-full flex items-center justify-center text-white text-xl animate-pulse-slow">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text animate-slide-in-right">
+                    <h3>Who am I?</h3>
+                    <p>Detail-oriented Data Analyst with hands-on experience in transforming complex datasets into actionable insights using Power BI, SQL, and Python. Proven ability to build predictive models and dynamic dashboards that improve decision-making.</p>
+                    <p>Adept at collaborating in team environments and eager to contribute analytical skills to drive business outcomes. I am fluent in English and native in Malayalam.</p>
+                    <div class="mt-6 flex items-center gap-4">
+                        <a href="#" class="btn primary-btn">Download CV</a>
+                        <span class="text-primary animate-bounce-slow inline-block">
+                            <i class="fas fa-arrow-down text-xl"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Background decoration -->
+        <div class="hidden md:block absolute top-20 right-0 w-64 h-64 bg-blue-100 rounded-full opacity-20 -z-10"></div>
+        <div class="hidden md:block absolute bottom-20 left-0 w-40 h-40 bg-primary rounded-full opacity-10 -z-10"></div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <h2 class="section-title">Education & Certifications</h2>
+            <div class="education-container">
+                <div class="education-card">
+                    <div class="education-header">
+                        <h3>B.E. Computer Science & Engineering</h3>
+                        <span class="education-year">2020 - 2024</span>
+                    </div>
+                    <div class="education-body">
+                        <p class="education-institution">P.A. COLLEGE OF ENGINEERING</p>
+                        <p class="education-grade">CGPA: 7.4/10</p>
+                    </div>
+                </div>
+                
+                <div class="education-card">
+                    <div class="education-header">
+                        <h3>Data Science Certification</h3>
+                        <span class="education-year">JAN 2024 - JUN 2024</span>
+                    </div>
+                    <div class="education-body">
+                        <p class="education-institution">TECHMINDZ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills relative">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-container">
+                <div class="skill-card hover:scale-105 transition-transform duration-300 group">
+                    <div class="skill-icon group-hover:text-white group-hover:bg-primary rounded-full p-4 transition-all duration-300"><i class="fas fa-chart-bar"></i></div>
+                    <h3>Data Visualization</h3>
+                    <p>Power BI, Tableau, Excel</p>
+                    <div class="skill-level">
+                        <div class="skill-bar" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="skill-card hover:scale-105 transition-transform duration-300 group">
+                    <div class="skill-icon group-hover:text-white group-hover:bg-primary rounded-full p-4 transition-all duration-300"><i class="fas fa-code"></i></div>
+                    <h3>Programming</h3>
+                    <p>Python, SQL</p>
+                    <div class="skill-level">
+                        <div class="skill-bar" style="width: 85%"></div>
+                    </div>
+                </div>
+                <div class="skill-card hover:scale-105 transition-transform duration-300 group">
+                    <div class="skill-icon group-hover:text-white group-hover:bg-primary rounded-full p-4 transition-all duration-300"><i class="fas fa-brain"></i></div>
+                    <h3>Machine Learning</h3>
+                    <p>scikit-learn, Statistical Analysis</p>
+                    <div class="skill-level">
+                        <div class="skill-bar" style="width: 80%"></div>
+                    </div>
+                </div>
+                <div class="skill-card hover:scale-105 transition-transform duration-300 group">
+                    <div class="skill-icon group-hover:text-white group-hover:bg-primary rounded-full p-4 transition-all duration-300"><i class="fas fa-broom"></i></div>
+                    <h3>Data Cleaning</h3>
+                    <p>Preprocessing & Analysis</p>
+                    <div class="skill-level">
+                        <div class="skill-bar" style="width: 85%"></div>
+                    </div>
+                </div>
+                <div class="skill-card hover:scale-105 transition-transform duration-300 group">
+                    <div class="skill-icon group-hover:text-white group-hover:bg-primary rounded-full p-4 transition-all duration-300"><i class="fab fa-html5"></i></div>
+                    <h3>Web Development</h3>
+                    <p>HTML, CSS, JavaScript</p>
+                    <div class="skill-level">
+                        <div class="skill-bar" style="width: 75%"></div>
+                    </div>
+                </div>
+                <div class="skill-card hover:scale-105 transition-transform duration-300 group">
+                    <div class="skill-icon group-hover:text-white group-hover:bg-primary rounded-full p-4 transition-all duration-300"><i class="fas fa-comments"></i></div>
+                    <h3>Communication</h3>
+                    <p>Effective Teamwork</p>
+                    <div class="skill-level">
+                        <div class="skill-bar" style="width: 90%"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="languages-section backdrop-blur-sm bg-white/70 mt-12">
+                <h3 class="relative inline-block">
+                    Languages
+                    <span class="absolute -bottom-1 left-0 w-full h-1 bg-primary rounded-full"></span>
+                </h3>
+                <div class="language-items">
+                    <div class="language-item hover:bg-blue-50 transition-colors duration-300">
+                        <span class="language-name flex items-center">
+                            <span class="inline-block w-6 h-6 mr-2 rounded-full bg-blue-100 flex items-center justify-center text-primary text-xs">EN</span>
+                            English
+                        </span>
+                        <span class="language-level">Fluent</span>
+                    </div>
+                    <div class="language-item hover:bg-blue-50 transition-colors duration-300">
+                        <span class="language-name flex items-center">
+                            <span class="inline-block w-6 h-6 mr-2 rounded-full bg-blue-100 flex items-center justify-center text-primary text-xs">ML</span>
+                            Malayalam
+                        </span>
+                        <span class="language-level">Native</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Decorative elements -->
+        <div class="absolute top-10 left-10 w-20 h-20 border-4 border-primary opacity-10 rounded-full -z-10"></div>
+        <div class="absolute bottom-10 right-10 w-32 h-32 border-8 border-blue-200 opacity-20 rounded-full -z-10"></div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects relative">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1: Eskimos Road to Glory -->
+                <div class="project-card group">
+                    <div class="project-image overflow-hidden">
+                        <img src="assets/images/eskimos.svg" alt="Eskimos Road to Glory" class="group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 right-4 bg-primary text-white text-xs py-1 px-3 rounded-full">Featured</div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="group-hover:text-primary transition-colors duration-300">Eskimos Road to Glory</h3>
+                        <p>A FIFA Pro Clubs community platform where players can join tournaments, track progress, and build their virtual football careers.</p>
+                        <div class="project-tags">
+                            <span class="bg-blue-50 text-primary">HTML</span>
+                            <span class="bg-blue-50 text-primary">CSS</span>
+                            <span class="bg-blue-50 text-primary">JavaScript</span>
+                            <span class="bg-blue-50 text-primary">React</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://eskr2g.vercel.app/" target="_blank" class="btn small-btn flex items-center gap-2">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/Shamsear" target="_blank" class="btn small-btn secondary-btn flex items-center gap-2">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2: SS League Auction -->
+                <div class="project-card group">
+                    <div class="project-image overflow-hidden">
+                        <img src="assets/images/ssleague.svg" alt="SS League Auction" class="group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="group-hover:text-primary transition-colors duration-300">SS League Auction</h3>
+                        <p>A football auction platform for the South Soccers PES Super League, featuring live bidding, team management, and secure transactions.</p>
+                        <div class="project-tags">
+                            <span class="bg-blue-50 text-primary">HTML</span>
+                            <span class="bg-blue-50 text-primary">CSS</span>
+                            <span class="bg-blue-50 text-primary">JavaScript</span>
+                            <span class="bg-blue-50 text-primary">Node.js</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://ssleague.onrender.com/" target="_blank" class="btn small-btn flex items-center gap-2">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/Shamsear" target="_blank" class="btn small-btn secondary-btn flex items-center gap-2">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Sales Insights Dashboard -->
+                <div class="project-card group">
+                    <div class="project-image overflow-hidden">
+                        <img src="assets/images/sales.svg" alt="Sales Insights Dashboard" class="group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="group-hover:text-primary transition-colors duration-300">Sales Insights Dashboard</h3>
+                        <p>An interactive Power BI dashboard providing comprehensive sales analytics and business intelligence insights.</p>
+                        <div class="project-tags">
+                            <span class="bg-blue-50 text-primary">Power BI</span>
+                            <span class="bg-blue-50 text-primary">Data Analysis</span>
+                            <span class="bg-blue-50 text-primary">Business Intelligence</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="btn small-btn flex items-center gap-2">
+                                <i class="fas fa-info-circle"></i> View Details
+                            </a>
+                            <a href="https://github.com/Shamsear" target="_blank" class="btn small-btn secondary-btn flex items-center gap-2">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Hanao Data Analysis -->
+                <div class="project-card group">
+                    <div class="project-image overflow-hidden">
+                        <img src="assets/images/hanao.svg" alt="Hanao Data Analysis" class="group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="group-hover:text-primary transition-colors duration-300">Hanao Data Analysis</h3>
+                        <p>Excel-based data analysis project featuring advanced formulas, pivot tables, and visualizations for business insights.</p>
+                        <div class="project-tags">
+                            <span class="bg-blue-50 text-primary">Excel</span>
+                            <span class="bg-blue-50 text-primary">Data Analysis</span>
+                            <span class="bg-blue-50 text-primary">Visualization</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="btn small-btn flex items-center gap-2">
+                                <i class="fas fa-info-circle"></i> View Details
+                            </a>
+                            <a href="https://github.com/Shamsear" target="_blank" class="btn small-btn secondary-btn flex items-center gap-2">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Decorative elements -->
+        <div class="hidden lg:block absolute top-40 right-10 w-24 h-24 bg-blue-100 opacity-50 rounded-full -z-10"></div>
+        <div class="hidden lg:block absolute bottom-40 left-10 w-32 h-32 bg-primary opacity-10 rounded-full -z-10"></div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact relative">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info transform hover:-translate-y-2 transition-transform duration-300">
+                    <h3 class="flex items-center gap-2">
+                        <i class="fas fa-paper-plane animate-pulse-slow"></i>
+                        Contact Information
+                    </h3>
+                    <div class="info-item hover:translate-x-2 transition-transform duration-300">
+                        <i class="fas fa-envelope"></i>
+                        <p>shamsear@gmail.com</p>
+                    </div>
+                    <div class="info-item hover:translate-x-2 transition-transform duration-300">
+                        <i class="fas fa-phone"></i>
+                        <p>+971 543641091</p>
+                    </div>
+                    <div class="info-item hover:translate-x-2 transition-transform duration-300">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Dubai, United Arab Emirates</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/Shamsear" target="_blank" class="hover:rotate-12 transition-transform duration-300"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/shamsear/" target="_blank" class="hover:rotate-12 transition-transform duration-300"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form shadow-lg backdrop-blur-sm bg-white/90">
+                    <form id="contactForm" class="space-y-4">
+                        <div class="form-group">
+                            <div class="relative">
+                                <input type="text" id="name" name="name" placeholder=" " required class="peer w-full pt-5 pb-2 px-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                                <label for="name" class="absolute left-3 top-2 text-gray-500 text-xs transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-xs peer-focus:text-primary">Your Name</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="relative">
+                                <input type="email" id="email" name="email" placeholder=" " required class="peer w-full pt-5 pb-2 px-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                                <label for="email" class="absolute left-3 top-2 text-gray-500 text-xs transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-xs peer-focus:text-primary">Your Email</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="relative">
+                                <input type="text" id="subject" name="subject" placeholder=" " required class="peer w-full pt-5 pb-2 px-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                                <label for="subject" class="absolute left-3 top-2 text-gray-500 text-xs transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-xs peer-focus:text-primary">Subject</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="relative">
+                                <textarea id="message" name="message" placeholder=" " required class="peer w-full pt-5 pb-2 px-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent min-h-[150px]"></textarea>
+                                <label for="message" class="absolute left-3 top-2 text-gray-500 text-xs transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-xs peer-focus:text-primary">Your Message</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn primary-btn w-full flex items-center justify-center gap-2 group">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane group-hover:translate-x-1 transition-transform duration-300"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Decorative elements -->
+        <div class="hidden md:block absolute top-20 left-10 w-40 h-40 bg-blue-100 rounded-full opacity-20 -z-10"></div>
+        <div class="hidden md:block absolute bottom-20 right-10 w-60 h-60 bg-primary rounded-full opacity-10 -z-10"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark relative overflow-hidden">
+        <div class="container py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-8">
+                <div class="text-white text-2xl font-bold">
+                    Shamsear Ebrahim
+                    <div class="h-1 w-20 bg-primary mt-2 rounded-full"></div>
+                </div>
+                <div class="flex gap-4">
+                    <a href="https://github.com/Shamsear" target="_blank" class="text-white hover:text-primary transition-colors duration-300">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/shamsear/" target="_blank" class="text-white hover:text-primary transition-colors duration-300">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400">&copy; 2025 Shamsear Ebrahim. All Rights Reserved.</p>
+                <div class="flex gap-4 mt-4 md:mt-0">
+                    <a href="#home" class="text-gray-400 hover:text-primary transition-colors duration-300">Home</a>
+                    <a href="#about" class="text-gray-400 hover:text-primary transition-colors duration-300">About</a>
+                    <a href="#projects" class="text-gray-400 hover:text-primary transition-colors duration-300">Projects</a>
+                    <a href="#contact" class="text-gray-400 hover:text-primary transition-colors duration-300">Contact</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Decorative elements -->
+        <div class="absolute top-0 left-0 w-40 h-40 bg-primary opacity-10 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 right-0 w-60 h-60 bg-primary opacity-5 rounded-full translate-x-1/3 translate-y-1/3"></div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/tailwind-components.js"></script>
+</body>
+</html> 

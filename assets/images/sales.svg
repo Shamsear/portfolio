@@ -1,0 +1,25 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#212529"/>
+  <text x="200" y="80" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle" font-weight="bold">SALES INSIGHTS</text>
+  <text x="200" y="110" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">DASHBOARD</text>
+  
+  <!-- Chart elements -->
+  <rect x="80" y="140" width="40" height="100" fill="#4a6bff"/>
+  <rect x="140" y="160" width="40" height="80" fill="#28a745"/>
+  <rect x="200" y="130" width="40" height="110" fill="#dc3545"/>
+  <rect x="260" y="180" width="40" height="60" fill="#ffc107"/>
+  
+  <!-- X and Y axis -->
+  <line x1="60" y1="240" x2="320" y2="240" stroke="#ffffff" stroke-width="2"/>
+  <line x1="60" y1="240" x2="60" y2="120" stroke="#ffffff" stroke-width="2"/>
+  
+  <!-- Legend -->
+  <rect x="100" y="260" width="10" height="10" fill="#4a6bff"/>
+  <text x="115" y="270" font-family="Arial" font-size="12" fill="#ffffff">Q1</text>
+  <rect x="150" y="260" width="10" height="10" fill="#28a745"/>
+  <text x="165" y="270" font-family="Arial" font-size="12" fill="#ffffff">Q2</text>
+  <rect x="200" y="260" width="10" height="10" fill="#dc3545"/>
+  <text x="215" y="270" font-family="Arial" font-size="12" fill="#ffffff">Q3</text>
+  <rect x="250" y="260" width="10" height="10" fill="#ffc107"/>
+  <text x="265" y="270" font-family="Arial" font-size="12" fill="#ffffff">Q4</text>
+</svg> 

@@ -1,0 +1,10 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#1a2b4d"/>
+  <text x="200" y="100" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle" font-weight="bold">ESKIMOS</text>
+  <text x="200" y="140" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">ROAD TO GLORY</text>
+  <rect x="100" y="170" width="200" height="40" rx="20" fill="#4a6bff"/>
+  <text x="200" y="197" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">JOIN THE JOURNEY</text>
+  <circle cx="150" cy="240" r="15" fill="#ffffff"/>
+  <circle cx="200" cy="240" r="15" fill="#ffffff"/>
+  <circle cx="250" cy="240" r="15" fill="#ffffff"/>
+</svg> 

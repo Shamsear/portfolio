@@ -1,0 +1,38 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#1e7e34"/>
+  <text x="200" y="80" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle" font-weight="bold">HANAO</text>
+  <text x="200" y="110" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">DATA ANALYSIS</text>
+  
+  <!-- Excel grid representation -->
+  <rect x="80" y="140" width="240" height="120" fill="#ffffff" opacity="0.9"/>
+  
+  <!-- Grid lines -->
+  <line x1="80" y1="160" x2="320" y2="160" stroke="#1e7e34" stroke-width="1"/>
+  <line x1="80" y1="180" x2="320" y2="180" stroke="#1e7e34" stroke-width="1"/>
+  <line x1="80" y1="200" x2="320" y2="200" stroke="#1e7e34" stroke-width="1"/>
+  <line x1="80" y1="220" x2="320" y2="220" stroke="#1e7e34" stroke-width="1"/>
+  <line x1="80" y1="240" x2="320" y2="240" stroke="#1e7e34" stroke-width="1"/>
+  
+  <line x1="120" y1="140" x2="120" y2="260" stroke="#1e7e34" stroke-width="1"/>
+  <line x1="160" y1="140" x2="160" y2="260" stroke="#1e7e34" stroke-width="1"/>
+  <line x1="200" y1="140" x2="200" y2="260" stroke="#1e7e34" stroke-width="1"/>
+  <line x1="240" y1="140" x2="240" y2="260" stroke="#1e7e34" stroke-width="1"/>
+  <line x1="280" y1="140" x2="280" y2="260" stroke="#1e7e34" stroke-width="1"/>
+  
+  <!-- Header row -->
+  <rect x="80" y="140" width="240" height="20" fill="#1e7e34" opacity="0.7"/>
+  <text x="100" y="155" font-family="Arial" font-size="10" fill="#ffffff">ID</text>
+  <text x="140" y="155" font-family="Arial" font-size="10" fill="#ffffff">NAME</text>
+  <text x="180" y="155" font-family="Arial" font-size="10" fill="#ffffff">CATEGORY</text>
+  <text x="230" y="155" font-family="Arial" font-size="10" fill="#ffffff">VALUE</text>
+  <text x="290" y="155" font-family="Arial" font-size="10" fill="#ffffff">DATE</text>
+  
+  <!-- Small chart in the grid -->
+  <line x1="240" y1="240" x2="260" y2="220" stroke="#dc3545" stroke-width="2"/>
+  <line x1="260" y1="220" x2="280" y2="230" stroke="#dc3545" stroke-width="2"/>
+  <line x1="280" y1="230" x2="300" y2="200" stroke="#dc3545" stroke-width="2"/>
+  <circle cx="240" cy="240" r="3" fill="#dc3545"/>
+  <circle cx="260" cy="220" r="3" fill="#dc3545"/>
+  <circle cx="280" cy="230" r="3" fill="#dc3545"/>
+  <circle cx="300" cy="200" r="3" fill="#dc3545"/>
+</svg> 

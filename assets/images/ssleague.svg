@@ -1,0 +1,9 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#28a745"/>
+  <text x="200" y="100" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle" font-weight="bold">SS LEAGUE</text>
+  <text x="200" y="140" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">AUCTION</text>
+  <circle cx="200" cy="190" r="40" fill="#ffffff"/>
+  <polygon points="200,170 190,200 210,200" fill="#28a745"/>
+  <rect x="100" y="240" width="200" height="30" rx="15" fill="#ffffff"/>
+  <text x="200" y="262" font-family="Arial" font-size="16" fill="#28a745" text-anchor="middle">FOOTBALL AUCTION</text>
+</svg> 
