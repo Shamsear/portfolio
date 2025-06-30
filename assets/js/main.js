@@ -1,3 +1,21 @@
+// Page Loader
+window.addEventListener('load', () => {
+    const pageLoader = document.querySelector('.page-loader');
+    if (pageLoader) {
+        setTimeout(() => {
+            pageLoader.classList.add('fade-out');
+        }, 500);
+    }
+});
+
+// Also hide loader if it's taking too long (fallback)
+setTimeout(() => {
+    const pageLoader = document.querySelector('.page-loader');
+    if (pageLoader) {
+        pageLoader.classList.add('fade-out');
+    }
+}, 3000);
+
 // Wait for the DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', () => {
     // Elements
@@ -7,6 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinksItems = document.querySelectorAll('.nav-links li');
     const sections = document.querySelectorAll('section');
     const contactForm = document.querySelector('#contactForm');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
 
     // Sticky Header
     window.addEventListener('scroll', () => {
@@ -55,6 +75,48 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Project filtering functionality
+    if (filterBtns.length > 0 && projectCards.length > 0) {
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                
+                // Add active class to clicked button
+                btn.classList.add('active');
+                
+                // Get filter value
+                const filter = btn.getAttribute('data-filter');
+                
+                // Filter projects
+                projectCards.forEach(card => {
+                    if (filter === 'all') {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'scale(1)';
+                        }, 100);
+                    } else {
+                        const categories = card.getAttribute('data-category').split(' ');
+                        if (categories.includes(filter)) {
+                            card.style.display = 'block';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'scale(1)';
+                            }, 100);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'scale(0.8)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
+                    }
+                });
+            });
+        });
+    }
+
     // Update active menu item based on scroll position
     function updateActiveMenu() {
         let current = '';
@@ -99,10 +161,29 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
             
-            // In a real application, you would send the form data to a server here
-            // For demonstration purposes, we'll just show a success message
-            showAlert('Message sent successfully!', 'success');
-            contactForm.reset();
+            // Show loading message
+            showAlert('Sending message...', 'info');
+            
+            // Prepare email data for EmailJS
+            const templateParams = {
+                from_name: name,
+                from_email: email,
+                subject: subject,
+                message: message,
+                to_name: 'Shamsear Ebrahim'
+            };
+            
+            // Send email using EmailJS
+            // Note: Replace 'YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', and 'YOUR_USER_ID' with actual values
+            // You'll need to create an account at emailjs.com and set up a service and template
+            emailjs.send('service_g24wt76', 'template_jsm32hb', templateParams, 'Nb8ThHEgrWHlteSAX')
+                .then(function(response) {
+                    showAlert('Message sent successfully!', 'success');
+                    contactForm.reset();
+                }, function(error) {
+                    console.error('Email error:', error);
+                    showAlert('Failed to send message. Please try again later.', 'error');
+                });
         });
     }
 
@@ -116,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function showAlert(message, type) {
         // Create alert element
         const alertEl = document.createElement('div');
-        alertEl.className = `alert ${type === 'success' ? 'alert-success' : 'alert-error'}`;
+        alertEl.className = `alert ${type === 'success' ? 'alert-success' : type === 'info' ? 'alert-info' : 'alert-error'}`;
         alertEl.textContent = message;
         
         // Style the alert
@@ -131,6 +212,8 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if (type === 'success') {
             alertEl.style.backgroundColor = '#28a745';
+        } else if (type === 'info') {
+            alertEl.style.backgroundColor = '#17a2b8';
         } else {
             alertEl.style.backgroundColor = '#dc3545';
         }
