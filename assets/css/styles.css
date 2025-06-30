@@ -251,7 +251,8 @@ nav {
 
 .image-container img {
     width: 100%;
-    height: 100%;
+    height: 200%;
+    object-position: -2px;
     object-fit: cover;
 }
 
