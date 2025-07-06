@@ -4,7 +4,7 @@
 
 ## 🚀 Live Demo
 
-Visit the live portfolio: [https://shamsear.github.io/portfolio](https://shamsear.github.io/portfolio)
+Visit the live portfolio: [https://shamsear.vercel.app](https://shamsear.vercel.app)
 
 ## 📋 Overview
 
