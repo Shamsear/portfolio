@@ -1,0 +1,27 @@
+{
+  "name": "shamsear-portfolio",
+  "version": "1.0.0",
+  "description": "A modern, responsive portfolio website showcasing Shamsear Ebrahim's skills and projects as a Data Analyst",
+  "main": "index.html",
+  "scripts": {
+    "dev": "echo 'Development server not configured. Install live-server (npm install -g live-server) and run \"live-server\" or update this script.'",
+    "start": "echo 'Starting portfolio... Open index.html in your browser or use a local server.'",
+    "build": "echo 'No build process required for this static portfolio.'"
+  },
+  "keywords": [
+    "portfolio",
+    "data-analyst",
+    "web-development",
+    "responsive-design",
+    "javascript",
+    "html",
+    "css"
+  ],
+  "author": "Shamsear Ebrahim <shamsear@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Shamsear/portfolio.git"
+  },
+  "homepage": "https://shamsear.vercel.app"
+}
