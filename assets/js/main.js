@@ -27,16 +27,49 @@ document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.querySelector('#contactForm');
     const filterBtns = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-card');
+    
+    // Apply dark theme to header initially
+    const applyDarkHeader = () => {
+        header.style.backgroundColor = '#0a0a0a';
+        header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.2)';
+        
+        // Ensure header links are light colored
+        const headerLinks = header.querySelectorAll('a');
+        headerLinks.forEach(link => {
+            link.classList.add('text-light');
+            link.classList.remove('text-dark');
+        });
+        
+        // Ensure logo is light colored
+        const logo = header.querySelector('.logo');
+        if (logo) {
+            logo.classList.add('text-light');
+            logo.classList.remove('text-dark');
+        }
+        
+        // Ensure hamburger lines are light colored
+        const hamburgerLines = header.querySelectorAll('.hamburger span');
+        hamburgerLines.forEach(line => {
+            line.classList.add('bg-light');
+            line.classList.remove('bg-dark');
+        });
+    };
+    
+    // Apply dark theme initially
+    applyDarkHeader();
 
     // Sticky Header
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-            header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
-            header.style.backgroundColor = '#ffffff';
+            header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.2)';
+            header.style.backgroundColor = '#0a0a0a'; // darker color from our theme
         } else {
-            header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-            header.style.backgroundColor = '#ffffff';
+            header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.2)';
+            header.style.backgroundColor = '#0a0a0a'; // darker color from our theme
         }
+        
+        // Ensure header stays dark themed
+        applyDarkHeader();
         
         // Active menu based on scroll position
         updateActiveMenu();
