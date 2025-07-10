@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,8 +14,11 @@
                         primary: '#4a6bff',
                         'primary-dark': '#3a5bef',
                         secondary: '#6c757d',
-                        dark: '#212529',
-                        light: '#f8f9fa'
+                        dark: '#121212',
+                        darker: '#0a0a0a',
+                        'dark-card': '#1e1e1e',
+                        'dark-surface': '#252525',
+                        light: '#e2e2e2'
                     },
                     fontFamily: {
                         sans: ['Poppins', 'sans-serif'],
@@ -73,7 +76,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: #ffffff;
+            background-color: #121212;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -123,7 +126,6 @@
         }
     </style>
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/advanced-animations.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
@@ -137,7 +139,7 @@
         })();
     </script>
 </head>
-<body>
+<body class="bg-dark text-light">
     <!-- Page Loader -->
     <div class="page-loader">
         <div class="loader">
@@ -147,50 +149,50 @@
     </div>
 
     <!-- Header Section -->
-    <header class="glass-nav">
+    <header class="bg-darker/90 backdrop-blur-sm">
         <div class="container">
             <nav>
-                <div class="logo relative">
+                <div class="logo relative text-light">
                     Shamsear
-                    <span class="absolute -bottom-1 left-0 w-1/2 h-1 bg-primary rounded-full animate-pulse"></span>
+                    <span class="absolute -bottom-1 left-0 w-1/2 h-1 bg-primary rounded-full"></span>
                 </div>
                 <ul class="nav-links">
-                    <li><a href="#home" class="active hover:text-primary transition-all duration-500 relative overflow-hidden">Home</a></li>
-                    <li><a href="#about" class="hover:text-primary transition-all duration-500 relative overflow-hidden">About</a></li>
-                    <li><a href="#education" class="hover:text-primary transition-all duration-500 relative overflow-hidden">Education</a></li>
-                    <li><a href="#skills" class="hover:text-primary transition-all duration-500 relative overflow-hidden">Skills</a></li>
-                    <li><a href="#projects" class="hover:text-primary transition-all duration-500 relative overflow-hidden">Projects</a></li>
-                    <li><a href="#contact" class="hover:text-primary transition-all duration-500 relative overflow-hidden">Contact</a></li>
+                    <li><a href="#home" class="active text-light hover:text-primary transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full">Home</a></li>
+                    <li><a href="#about" class="text-light hover:text-primary transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full">About</a></li>
+                    <li><a href="#education" class="text-light hover:text-primary transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full">Education</a></li>
+                    <li><a href="#skills" class="text-light hover:text-primary transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full">Skills</a></li>
+                    <li><a href="#projects" class="text-light hover:text-primary transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full">Projects</a></li>
+                    <li><a href="#contact" class="text-light hover:text-primary transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full">Contact</a></li>
                 </ul>
                 <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span class="bg-light"></span>
+                    <span class="bg-light"></span>
+                    <span class="bg-light"></span>
                 </div>
             </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero relative overflow-hidden">
+    <section id="home" class="hero bg-dark">
         <div class="container">
             <div class="hero-content">
-                <h1 class="animate-fade-in-down text-reveal">Hi, I'm <span class="highlight gradient-text">Shamsear Ebrahim</span></h1>
-                <h2 class="animate-fade-in-down animation-delay-300 typewriter">Data Analyst</h2>
-                <p class="animate-fade-in-down animation-delay-500 text-lg">I transform complex datasets into actionable insights</p>
-                <div class="cta-buttons animate-fade-in-up animation-delay-700 flex flex-wrap justify-center gap-4">
-                    <a href="#contact" class="btn primary-btn btn-advanced btn-magnetic hover-lift">Contact Me</a>
-                    <a href="#projects" class="btn secondary-btn btn-advanced btn-magnetic hover-lift">View My Work</a>
+                <h1 class="animate-fade-in-down text-light">Hi, I'm <span class="highlight text-primary">Shamsear Ebrahim</span></h1>
+                <h2 class="animate-fade-in-down animation-delay-300 text-light/90">Data Analyst</h2>
+                <p class="animate-fade-in-down animation-delay-500 text-light/70">I transform complex datasets into actionable insights</p>
+                <div class="cta-buttons animate-fade-in-up animation-delay-700">
+                    <a href="#contact" class="btn primary-btn">Contact Me</a>
+                    <a href="#projects" class="btn secondary-btn bg-dark-surface text-light border border-gray-700 hover:bg-dark-card">View My Work</a>
                 </div>
                 <div class="social-links animate-fade-in-up animation-delay-1000">
-                    <a href="https://github.com/Shamsear" target="_blank" class="hover-glow"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/in/shamsear/" target="_blank" class="hover-glow"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Shamsear" target="_blank" class="text-light hover:text-primary"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/shamsear/" target="_blank" class="text-light hover:text-primary"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
         </div>
         
         <!-- Floating background elements -->
-        <div class="floating-elements parallax-element">
+        <div class="floating-elements">
             <div class="floating-element" style="top: 20%; left: 10%;">
                 <i class="fas fa-chart-pie text-4xl text-primary/30"></i>
             </div>
@@ -215,21 +217,21 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about relative overflow-hidden">
+    <section id="about" class="about relative bg-dark">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title text-light">About Me</h2>
             <div class="about-content">
-                <div class="about-image animate-slide-in-left stagger-animation">
-                    <div class="image-container card-tilt hover-lift">
+                <div class="about-image animate-slide-in-left">
+                    <div class="image-container border-primary">
                         <img src="assets/images/shamsear.jpg" alt="Profile Picture">
                     </div>
                 </div>
-                <div class="about-text animate-slide-in-right stagger-animation">
-                    <h3>Who am I?</h3>
+                <div class="about-text animate-slide-in-right text-light/90">
+                    <h3 class="text-light">Who am I?</h3>
                     <p>Detail-oriented Data Analyst with hands-on experience in transforming complex datasets into actionable insights using Power BI, SQL, and Python. Proven ability to build predictive models and dynamic dashboards that improve decision-making.</p>
                     <p>Adept at collaborating in team environments and eager to contribute analytical skills to drive business outcomes. I am fluent in English and native in Malayalam.</p>
                     <div class="mt-6 flex items-center gap-4">
-                        <a href="assets/images/shamsear_resume.pdf" class="btn primary-btn btn-advanced btn-magnetic hover-lift">Download CV</a>
+                        <a href="assets/images/shamsear_resume.pdf" class="btn primary-btn">Download CV</a>
                         <span class="text-primary animate-bounce-slow inline-block">
                             <i class="fas fa-arrow-down text-xl"></i>
                         </span>
@@ -239,35 +241,35 @@
         </div>
         
         <!-- Background decoration -->
-        <div class="hidden md:block absolute top-20 right-0 w-64 h-64 morphing-blob -z-10"></div>
-        <div class="hidden md:block absolute bottom-20 left-0 w-40 h-40 morphing-blob -z-10" style="animation-delay: 2s;"></div>
-        <div class="hidden md:block absolute top-1/2 left-1/4 w-8 h-8 bg-yellow-200 rounded-full opacity-40 -z-10 animate-pulse"></div>
-        <div class="hidden md:block absolute bottom-1/3 right-1/4 w-16 h-16 bg-green-100 rounded-full opacity-30 -z-10 animate-bounce-slow"></div>
+        <div class="hidden md:block absolute top-20 right-0 w-64 h-64 bg-blue-900 rounded-full opacity-10 -z-10"></div>
+        <div class="hidden md:block absolute bottom-20 left-0 w-40 h-40 bg-primary rounded-full opacity-10 -z-10"></div>
+        <div class="hidden md:block absolute top-1/2 left-1/4 w-8 h-8 bg-yellow-600 rounded-full opacity-20 -z-10"></div>
+        <div class="hidden md:block absolute bottom-1/3 right-1/4 w-16 h-16 bg-green-900 rounded-full opacity-10 -z-10"></div>
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="education relative">
+    <section id="education" class="education bg-darker">
         <div class="container">
-            <h2 class="section-title">Education & Certifications</h2>
+            <h2 class="section-title text-light">Education & Certifications</h2>
             <div class="education-container">
-                <div class="education-card glass-card hover-lift stagger-animation">
+                <div class="education-card bg-dark-card border-gray-700 shadow-lg">
                     <div class="education-header">
-                        <h3>B.E. Computer Science & Engineering</h3>
-                        <span class="education-year">Nov 2020 - Jun 2024</span>
+                        <h3 class="text-light">B.E. Computer Science & Engineering</h3>
+                        <span class="education-year text-gray-400">Nov 2020 - Jun 2024</span>
                     </div>
                     <div class="education-body">
-                        <p class="education-institution">P.A. COLLEGE OF ENGINEERING</p>
-                        <p class="education-grade">CGPA: 7.4/10</p>
+                        <p class="education-institution text-primary">P.A. COLLEGE OF ENGINEERING</p>
+                        <p class="education-grade text-gray-400">CGPA: 7.4/10</p>
                     </div>
                 </div>
                 
-                <div class="education-card glass-card hover-lift stagger-animation">
+                <div class="education-card bg-dark-card border-gray-700 shadow-lg">
                     <div class="education-header">
-                        <h3>Data Science Certification</h3>
-                        <span class="education-year">Jan 2025 - Jun 2025</span>
+                        <h3 class="text-light">Data Science Certification</h3>
+                        <span class="education-year text-gray-400">Jan 2025 - Jun 2025</span>
                     </div>
                     <div class="education-body">
-                        <p class="education-institution">TECHMINDZ</p>
+                        <p class="education-institution text-primary">TECHMINDZ</p>
                     </div>
                 </div>
             </div>
@@ -275,133 +277,133 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="skills relative overflow-hidden">
+    <section id="skills" class="skills relative bg-dark">
         <div class="container">
-            <h2 class="section-title">My Skills</h2>
+            <h2 class="section-title text-light">My Skills</h2>
             <div class="skills-container">
-                <div class="skill-card card-tilt hover-glow stagger-animation group">
-                    <div class="skill-icon group-hover:text-white group-hover:bg-primary rounded-full p-4 transition-all duration-300"><i class="fas fa-chart-bar"></i></div>
-                    <h3>Data Visualization</h3>
-                    <p>Power BI, Tableau, Excel</p>
-                    <div class="skill-level">
-                        <div class="skill-bar skill-bar-advanced" style="width: 90%"></div>
+                <div class="skill-card bg-dark-card hover:scale-105 transition-transform duration-300 group shadow-lg border border-gray-700">
+                    <div class="skill-icon text-primary group-hover:text-white group-hover:bg-primary rounded-full p-4 transition-all duration-300"><i class="fas fa-chart-bar"></i></div>
+                    <h3 class="text-light">Data Visualization</h3>
+                    <p class="text-gray-400">Power BI, Tableau, Excel</p>
+                    <div class="skill-level bg-gray-700">
+                        <div class="skill-bar bg-primary" style="width: 90%"></div>
                     </div>
                 </div>
-                <div class="skill-card card-tilt hover-glow stagger-animation group">
-                    <div class="skill-icon group-hover:text-white group-hover:bg-primary rounded-full p-4 transition-all duration-300"><i class="fas fa-code"></i></div>
-                    <h3>Programming</h3>
-                    <p>Python, SQL</p>
-                    <div class="skill-level">
-                        <div class="skill-bar skill-bar-advanced" style="width: 85%"></div>
+                <div class="skill-card bg-dark-card hover:scale-105 transition-transform duration-300 group shadow-lg border border-gray-700">
+                    <div class="skill-icon text-primary group-hover:text-white group-hover:bg-primary rounded-full p-4 transition-all duration-300"><i class="fas fa-code"></i></div>
+                    <h3 class="text-light">Programming</h3>
+                    <p class="text-gray-400">Python, SQL</p>
+                    <div class="skill-level bg-gray-700">
+                        <div class="skill-bar bg-primary" style="width: 85%"></div>
                     </div>
                 </div>
-                <div class="skill-card card-tilt hover-glow stagger-animation group">
-                    <div class="skill-icon group-hover:text-white group-hover:bg-primary rounded-full p-4 transition-all duration-300"><i class="fas fa-brain"></i></div>
-                    <h3>Machine Learning</h3>
-                    <p>scikit-learn, Statistical Analysis</p>
-                    <div class="skill-level">
-                        <div class="skill-bar skill-bar-advanced" style="width: 80%"></div>
+                <div class="skill-card bg-dark-card hover:scale-105 transition-transform duration-300 group shadow-lg border border-gray-700">
+                    <div class="skill-icon text-primary group-hover:text-white group-hover:bg-primary rounded-full p-4 transition-all duration-300"><i class="fas fa-brain"></i></div>
+                    <h3 class="text-light">Machine Learning</h3>
+                    <p class="text-gray-400">scikit-learn, Statistical Analysis</p>
+                    <div class="skill-level bg-gray-700">
+                        <div class="skill-bar bg-primary" style="width: 80%"></div>
                     </div>
                 </div>
-                <div class="skill-card card-tilt hover-glow stagger-animation group">
-                    <div class="skill-icon group-hover:text-white group-hover:bg-primary rounded-full p-4 transition-all duration-300"><i class="fas fa-broom"></i></div>
-                    <h3>Data Cleaning</h3>
-                    <p>Preprocessing & Analysis</p>
-                    <div class="skill-level">
-                        <div class="skill-bar skill-bar-advanced" style="width: 85%"></div>
+                <div class="skill-card bg-dark-card hover:scale-105 transition-transform duration-300 group shadow-lg border border-gray-700">
+                    <div class="skill-icon text-primary group-hover:text-white group-hover:bg-primary rounded-full p-4 transition-all duration-300"><i class="fas fa-broom"></i></div>
+                    <h3 class="text-light">Data Cleaning</h3>
+                    <p class="text-gray-400">Preprocessing & Analysis</p>
+                    <div class="skill-level bg-gray-700">
+                        <div class="skill-bar bg-primary" style="width: 85%"></div>
                     </div>
                 </div>
-                <div class="skill-card card-tilt hover-glow stagger-animation group">
-                    <div class="skill-icon group-hover:text-white group-hover:bg-primary rounded-full p-4 transition-all duration-300"><i class="fab fa-html5"></i></div>
-                    <h3>Web Development</h3>
-                    <p>HTML, CSS, JavaScript</p>
-                    <div class="skill-level">
-                        <div class="skill-bar skill-bar-advanced" style="width: 75%"></div>
+                <div class="skill-card bg-dark-card hover:scale-105 transition-transform duration-300 group shadow-lg border border-gray-700">
+                    <div class="skill-icon text-primary group-hover:text-white group-hover:bg-primary rounded-full p-4 transition-all duration-300"><i class="fab fa-html5"></i></div>
+                    <h3 class="text-light">Web Development</h3>
+                    <p class="text-gray-400">HTML, CSS, JavaScript</p>
+                    <div class="skill-level bg-gray-700">
+                        <div class="skill-bar bg-primary" style="width: 75%"></div>
                     </div>
                 </div>
-                <div class="skill-card card-tilt hover-glow stagger-animation group">
-                    <div class="skill-icon group-hover:text-white group-hover:bg-primary rounded-full p-4 transition-all duration-300"><i class="fas fa-comments"></i></div>
-                    <h3>Communication</h3>
-                    <p>Effective Teamwork</p>
-                    <div class="skill-level">
-                        <div class="skill-bar skill-bar-advanced" style="width: 90%"></div>
+                <div class="skill-card bg-dark-card hover:scale-105 transition-transform duration-300 group shadow-lg border border-gray-700">
+                    <div class="skill-icon text-primary group-hover:text-white group-hover:bg-primary rounded-full p-4 transition-all duration-300"><i class="fas fa-comments"></i></div>
+                    <h3 class="text-light">Communication</h3>
+                    <p class="text-gray-400">Effective Teamwork</p>
+                    <div class="skill-level bg-gray-700">
+                        <div class="skill-bar bg-primary" style="width: 90%"></div>
                     </div>
                 </div>
             </div>
             
-            <div class="languages-section glass-card mt-12 hover-lift">
-                <h3 class="relative inline-block">
+            <div class="languages-section backdrop-blur-sm bg-dark-surface/70 mt-12 border border-gray-700">
+                <h3 class="relative inline-block text-light">
                     Languages
                     <span class="absolute -bottom-1 left-0 w-full h-1 bg-primary rounded-full"></span>
                 </h3>
                 <div class="language-items">
-                    <div class="language-item hover:bg-blue-50 transition-all duration-300 hover-lift">
-                        <span class="language-name flex items-center">
-                            <span class="inline-block w-6 h-6 mr-2 rounded-full bg-blue-100 flex items-center justify-center text-primary text-xs">EN</span>
+                    <div class="language-item hover:bg-dark-card transition-colors duration-300 border-gray-700">
+                        <span class="language-name flex items-center text-light">
+                            <span class="inline-block w-6 h-6 mr-2 rounded-full bg-blue-900 flex items-center justify-center text-primary text-xs">EN</span>
                             English
                         </span>
-                        <span class="language-level">Fluent</span>
+                        <span class="language-level text-primary">Fluent</span>
                     </div>
-                    <div class="language-item hover:bg-blue-50 transition-all duration-300 hover-lift">
-                        <span class="language-name flex items-center">
-                            <span class="inline-block w-6 h-6 mr-2 rounded-full bg-blue-100 flex items-center justify-center text-primary text-xs">ML</span>
+                    <div class="language-item hover:bg-dark-card transition-colors duration-300 border-gray-700">
+                        <span class="language-name flex items-center text-light">
+                            <span class="inline-block w-6 h-6 mr-2 rounded-full bg-blue-900 flex items-center justify-center text-primary text-xs">ML</span>
                             Malayalam
                         </span>
-                        <span class="language-level">Native</span>
+                        <span class="language-level text-primary">Native</span>
                     </div>
                 </div>
             </div>
         </div>
         
         <!-- Decorative elements -->
-        <div class="absolute top-10 left-10 w-20 h-20 border-4 border-primary opacity-10 rounded-full -z-10 animate-pulse"></div>
-        <div class="absolute bottom-10 right-10 w-32 h-32 morphing-blob -z-10"></div>
+        <div class="absolute top-10 left-10 w-20 h-20 border-4 border-primary opacity-10 rounded-full -z-10"></div>
+        <div class="absolute bottom-10 right-10 w-32 h-32 border-8 border-blue-900 opacity-10 rounded-full -z-10"></div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects relative overflow-hidden">
+    <section id="projects" class="projects relative bg-darker">
         <div class="container">
-            <h2 class="section-title">My Projects</h2>
+            <h2 class="section-title text-light">My Projects</h2>
             
             <!-- Project Filter Buttons -->
             <div class="project-filters mb-8 flex flex-wrap justify-center gap-2">
-                <button class="filter-btn active btn-advanced btn-magnetic" data-filter="all">All</button>
-                <button class="filter-btn btn-advanced btn-magnetic" data-filter="data">Data Analysis</button>
-                <button class="filter-btn btn-advanced btn-magnetic" data-filter="web">Web Development</button>
-                <button class="filter-btn btn-advanced btn-magnetic" data-filter="visualization">Visualization</button>
+                <button class="filter-btn active bg-primary text-white">All</button>
+                <button class="filter-btn bg-dark-surface text-light hover:bg-primary hover:text-white border border-gray-700">Data Analysis</button>
+                <button class="filter-btn bg-dark-surface text-light hover:bg-primary hover:text-white border border-gray-700">Web Development</button>
+                <button class="filter-btn bg-dark-surface text-light hover:bg-primary hover:text-white border border-gray-700">Visualization</button>
             </div>
             
             <div class="projects-grid">
                 <!-- Project 1: AI Job Trends -->
-                <div class="project-card group card-3d hover-glow stagger-animation" data-category="data visualization">
+                <div class="project-card group bg-dark-card border border-gray-700" data-category="data visualization">
                     <div class="project-image overflow-hidden">
                         <img src="assets/images/ai_job_trends.svg" alt="AI Job Trends" class="group-hover:scale-110 transition-transform duration-500">
                         <div class="project-overlay">
                             <div class="project-category">Data Visualization</div>
                             <div class="project-actions">
-                                <a href="#" class="project-action-btn hover-lift">
+                                <a href="#" class="project-action-btn">
                                     <i class="fas fa-info-circle"></i>
                                 </a>
-                                <a href="/assets/extras/AI Job Trends.pbix" target="_blank" class="project-action-btn hover-lift">
+                                <a href="/assets/extras/AI Job Trends.pbix" target="_blank" class="project-action-btn">
                                     <i class="fas fa-file-download"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3 class="group-hover:text-primary transition-colors duration-300">AI Job Trends</h3>
-                        <p>A comprehensive Power BI analysis of artificial intelligence job market trends, skills demand, and salary insights.</p>
+                        <h3 class="group-hover:text-primary transition-colors duration-300 text-light">AI Job Trends</h3>
+                        <p class="text-gray-400">A comprehensive Power BI analysis of artificial intelligence job market trends, skills demand, and salary insights.</p>
                         <div class="project-tags">
-                            <span class="bg-blue-50 text-primary">Power BI</span>
-                            <span class="bg-blue-50 text-primary">AI</span>
-                            <span class="bg-blue-50 text-primary">Job Market Analysis</span>
+                            <span class="bg-blue-900 text-primary">Power BI</span>
+                            <span class="bg-blue-900 text-primary">AI</span>
+                            <span class="bg-blue-900 text-primary">Job Market Analysis</span>
                         </div>
                         <div class="project-details">
-                            <div class="project-stat">
+                            <div class="project-stat text-gray-400">
                                 <i class="fas fa-calendar-alt text-primary"></i>
                                 <span>2025</span>
                             </div>
-                            <div class="project-stat">
+                            <div class="project-stat text-gray-400">
                                 <i class="fas fa-chart-line text-primary"></i>
                                 <span>4+ Dashboards</span>
                             </div>
@@ -409,35 +411,35 @@
                     </div>
                 </div>
                 <!-- Project 2: Sales Insights Dashboard -->
-                <div class="project-card group card-3d hover-glow stagger-animation" data-category="data visualization">
+                <div class="project-card group bg-dark-card border border-gray-700" data-category="data visualization">
                     <div class="project-image overflow-hidden">
                         <img src="assets/images/sales.svg" alt="Sales Insights Dashboard" class="group-hover:scale-110 transition-transform duration-500">
                         <div class="project-overlay">
                             <div class="project-category">Data Visualization</div>
                             <div class="project-actions">
-                                <a href="#" class="project-action-btn hover-lift">
+                                <a href="#" class="project-action-btn">
                                     <i class="fas fa-info-circle"></i>
                                 </a>
-                                <a href="https://github.com/Shamsear/sales" target="_blank" class="project-action-btn hover-lift">
+                                <a href="https://github.com/Shamsear/sales" target="_blank" class="project-action-btn">
                                     <i class="fab fa-github"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3 class="group-hover:text-primary transition-colors duration-300">Sales Insights Dashboard</h3>
-                        <p>An interactive Power BI dashboard providing comprehensive sales analytics and business intelligence insights.</p>
+                        <h3 class="group-hover:text-primary transition-colors duration-300 text-light">Sales Insights Dashboard</h3>
+                        <p class="text-gray-400">An interactive Power BI dashboard providing comprehensive sales analytics and business intelligence insights.</p>
                         <div class="project-tags">
-                            <span class="bg-blue-50 text-primary">Power BI</span>
-                            <span class="bg-blue-50 text-primary">Data Analysis</span>
-                            <span class="bg-blue-50 text-primary">Business Intelligence</span>
+                            <span class="bg-blue-900 text-primary">Power BI</span>
+                            <span class="bg-blue-900 text-primary">Data Analysis</span>
+                            <span class="bg-blue-900 text-primary">Business Intelligence</span>
                         </div>
                         <div class="project-details">
-                            <div class="project-stat">
+                            <div class="project-stat text-gray-400">
                                 <i class="fas fa-calendar-alt text-primary"></i>
                                 <span>2025</span>
                             </div>
-                            <div class="project-stat">
+                            <div class="project-stat text-gray-400">
                                 <i class="fas fa-chart-line text-primary"></i>
                                 <span>10+ Reports</span>
                             </div>
@@ -446,35 +448,35 @@
                 </div>
 
                 <!-- Project 3: Hanao Data Analysis -->
-                <div class="project-card group card-3d hover-glow stagger-animation" data-category="data">
+                <div class="project-card group bg-dark-card border border-gray-700" data-category="data">
                     <div class="project-image overflow-hidden">
                         <img src="assets/images/hanao.svg" alt="Hanao Data Analysis" class="group-hover:scale-110 transition-transform duration-500">
                         <div class="project-overlay">
                             <div class="project-category">Data Analysis</div>
                             <div class="project-actions">
-                                <a href="#" class="project-action-btn hover-lift">
+                                <a href="#" class="project-action-btn">
                                     <i class="fas fa-info-circle"></i>
                                 </a>
-                                <a href="https://github.com/Shamsear" target="_blank" class="project-action-btn hover-lift">
+                                <a href="https://github.com/Shamsear" target="_blank" class="project-action-btn">
                                     <i class="fab fa-github"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3 class="group-hover:text-primary transition-colors duration-300">Hanao Data Analysis</h3>
-                        <p>Excel-based data analysis project featuring advanced formulas, pivot tables, and visualizations for business insights.</p>
+                        <h3 class="group-hover:text-primary transition-colors duration-300 text-light">Hanao Data Analysis</h3>
+                        <p class="text-gray-400">Excel-based data analysis project featuring advanced formulas, pivot tables, and visualizations for business insights.</p>
                         <div class="project-tags">
-                            <span class="bg-blue-50 text-primary">Excel</span>
-                            <span class="bg-blue-50 text-primary">Data Analysis</span>
-                            <span class="bg-blue-50 text-primary">Visualization</span>
+                            <span class="bg-blue-900 text-primary">Excel</span>
+                            <span class="bg-blue-900 text-primary">Data Analysis</span>
+                            <span class="bg-blue-900 text-primary">Visualization</span>
                         </div>
                         <div class="project-details">
-                            <div class="project-stat">
+                            <div class="project-stat text-gray-400">
                                 <i class="fas fa-calendar-alt text-primary"></i>
                                 <span>2025</span>
                             </div>
-                            <div class="project-stat">
+                            <div class="project-stat text-gray-400">
                                 <i class="fas fa-database text-primary"></i>
                                 <span>500+ Records</span>
                             </div>
@@ -483,16 +485,16 @@
                 </div>
                 
                 <!-- Project 4: Eskimos Road to Glory -->
-                <div class="project-card group card-3d hover-glow stagger-animation" data-category="web">
+                <div class="project-card group bg-dark-card border border-gray-700" data-category="web">
                     <div class="project-image overflow-hidden">
                         <img src="assets/images/eskimos.svg" alt="Eskimos Road to Glory" class="group-hover:scale-110 transition-transform duration-500">
                         <div class="project-overlay">
                             <div class="project-category">Web Development</div>
                             <div class="project-actions">
-                                <a href="https://eskr2g.vercel.app/" target="_blank" class="project-action-btn hover-lift">
+                                <a href="https://eskr2g.vercel.app/" target="_blank" class="project-action-btn">
                                     <i class="fas fa-external-link-alt"></i>
                                 </a>
-                                <a href="https://github.com/Shamsear/eskleague" target="_blank" class="project-action-btn hover-lift">
+                                <a href="https://github.com/Shamsear/eskleague" target="_blank" class="project-action-btn">
                                     <i class="fab fa-github"></i>
                                 </a>
                             </div>
@@ -500,20 +502,20 @@
                         <div class="absolute top-4 right-4 bg-primary text-white text-xs py-1 px-3 rounded-full">Featured</div>
                     </div>
                     <div class="project-info">
-                        <h3 class="group-hover:text-primary transition-colors duration-300">Eskimos Road to Glory</h3>
-                        <p>A FIFA Pro Clubs community platform where players can join tournaments, track progress, and build their virtual football careers.</p>
+                        <h3 class="group-hover:text-primary transition-colors duration-300 text-light">Eskimos Road to Glory</h3>
+                        <p class="text-gray-400">A FIFA Pro Clubs community platform where players can join tournaments, track progress, and build their virtual football careers.</p>
                         <div class="project-tags">
-                            <span class="bg-blue-50 text-primary">HTML</span>
-                            <span class="bg-blue-50 text-primary">CSS</span>
-                            <span class="bg-blue-50 text-primary">JavaScript</span>
-                            <span class="bg-blue-50 text-primary">React</span>
+                            <span class="bg-blue-900 text-primary">HTML</span>
+                            <span class="bg-blue-900 text-primary">CSS</span>
+                            <span class="bg-blue-900 text-primary">JavaScript</span>
+                            <span class="bg-blue-900 text-primary">React</span>
                         </div>
                         <div class="project-details">
-                            <div class="project-stat">
+                            <div class="project-stat text-gray-400">
                                 <i class="fas fa-calendar-alt text-primary"></i>
                                 <span>2024</span>
                             </div>
-                            <div class="project-stat">
+                            <div class="project-stat text-gray-400">
                                 <i class="fas fa-code-branch text-primary"></i>
                                 <span>35 Commits</span>
                             </div>
@@ -522,36 +524,36 @@
                 </div>
                 
                 <!-- Project 5: SS League Auction -->
-                <div class="project-card group card-3d hover-glow stagger-animation" data-category="web">
+                <div class="project-card group bg-dark-card border border-gray-700" data-category="web">
                     <div class="project-image overflow-hidden">
                         <img src="assets/images/ssleague.svg" alt="SS League Auction" class="group-hover:scale-110 transition-transform duration-500">
                         <div class="project-overlay">
                             <div class="project-category">Web Development</div>
                             <div class="project-actions">
-                                <a href="https://ssleague.onrender.com/" target="_blank" class="project-action-btn hover-lift">
+                                <a href="https://ssleague.onrender.com/" target="_blank" class="project-action-btn">
                                     <i class="fas fa-external-link-alt"></i>
                                 </a>
-                                <a href="https://github.com/Shamsear/ssleague1" target="_blank" class="project-action-btn hover-lift">
+                                <a href="https://github.com/Shamsear/ssleague1" target="_blank" class="project-action-btn">
                                     <i class="fab fa-github"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3 class="group-hover:text-primary transition-colors duration-300">SS League Auction</h3>
-                        <p>A football auction platform for the South Soccers PES Super League, featuring live bidding, team management, and secure transactions.</p>
+                        <h3 class="group-hover:text-primary transition-colors duration-300 text-light">SS League Auction</h3>
+                        <p class="text-gray-400">A football auction platform for the South Soccers PES Super League, featuring live bidding, team management, and secure transactions.</p>
                         <div class="project-tags">
-                            <span class="bg-blue-50 text-primary">HTML</span>
-                            <span class="bg-blue-50 text-primary">CSS</span>
-                            <span class="bg-blue-50 text-primary">JavaScript</span>
-                            <span class="bg-blue-50 text-primary">Node.js</span>
+                            <span class="bg-blue-900 text-primary">HTML</span>
+                            <span class="bg-blue-900 text-primary">CSS</span>
+                            <span class="bg-blue-900 text-primary">JavaScript</span>
+                            <span class="bg-blue-900 text-primary">Node.js</span>
                         </div>
                         <div class="project-details">
-                            <div class="project-stat">
+                            <div class="project-stat text-gray-400">
                                 <i class="fas fa-calendar-alt text-primary"></i>
                                 <span>2024</span>
                             </div>
-                            <div class="project-stat">
+                            <div class="project-stat text-gray-400">
                                 <i class="fas fa-code-branch text-primary"></i>
                                 <span>42 Commits</span>
                             </div>
@@ -562,99 +564,99 @@
         </div>
         
         <!-- Decorative elements -->
-        <div class="hidden lg:block absolute top-40 right-10 w-24 h-24 morphing-blob -z-10"></div>
-        <div class="hidden lg:block absolute bottom-40 left-10 w-32 h-32 morphing-blob -z-10" style="animation-delay: 3s;"></div>
-        <div class="hidden lg:block absolute top-1/4 left-1/4 w-16 h-16 bg-yellow-100 opacity-30 rounded-full -z-10 animate-pulse"></div>
+        <div class="hidden lg:block absolute top-40 right-10 w-24 h-24 bg-blue-900 opacity-20 rounded-full -z-10"></div>
+        <div class="hidden lg:block absolute bottom-40 left-10 w-32 h-32 bg-primary opacity-10 rounded-full -z-10"></div>
+        <div class="hidden lg:block absolute top-1/4 left-1/4 w-16 h-16 bg-yellow-700 opacity-10 rounded-full -z-10"></div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact relative overflow-hidden">
+    <section id="contact" class="contact relative bg-dark">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
+            <h2 class="section-title text-light">Get In Touch</h2>
             <div class="contact-container">
-                <div class="contact-info glass-card hover-lift stagger-animation">
+                <div class="contact-info transform hover:-translate-y-2 transition-transform duration-300 bg-dark-card border border-gray-700 shadow-lg">
                     <div class="info-header">
-                        <div class="info-icon">
+                        <div class="info-icon text-primary">
                             <i class="fas fa-paper-plane animate-pulse-slow"></i>
                         </div>
-                        <h3>Contact Information</h3>
-                        <p class="text-gray-500 text-sm">Feel free to reach out. I'm always open to discussing new projects, opportunities, and partnerships.</p>
+                        <h3 class="text-light">Contact Information</h3>
+                        <p class="text-gray-400 text-sm">Feel free to reach out. I'm always open to discussing new projects, opportunities, and partnerships.</p>
                     </div>
                     
                     <div class="info-details">
-                        <div class="info-item hover:translate-x-2 transition-all duration-300 hover-glow">
-                            <div class="info-item-icon">
+                        <div class="info-item hover:translate-x-2 transition-transform duration-300">
+                            <div class="info-item-icon text-primary">
                                 <i class="fas fa-envelope"></i>
                             </div>
                             <div class="info-item-content">
-                                <span class="info-label">Email</span>
-                                <p><a href="mailto:shamsear@gmail.com" class="text-dark hover:text-primary transition-colors">shamsear@gmail.com</a></p>
+                                <span class="info-label text-gray-400">Email</span>
+                                <p><a href="mailto:shamsear@gmail.com" class="text-light hover:text-primary transition-colors">shamsear@gmail.com</a></p>
                             </div>
                         </div>
-                        <div class="info-item hover:translate-x-2 transition-all duration-300 hover-glow">
-                            <div class="info-item-icon">
+                        <div class="info-item hover:translate-x-2 transition-transform duration-300">
+                            <div class="info-item-icon text-primary">
                                 <i class="fas fa-phone"></i>
                             </div>
                             <div class="info-item-content">
-                                <span class="info-label">Phone</span>
-                                <p><a href="tel:0543641091" class="text-dark hover:text-primary transition-colors">0543641091</a></p>
+                                <span class="info-label text-gray-400">Phone</span>
+                                <p><a href="tel:0543641091" class="text-light hover:text-primary transition-colors">0543641091</a></p>
                             </div>
                         </div>
-                        <div class="info-item hover:translate-x-2 transition-all duration-300 hover-glow">
-                            <div class="info-item-icon">
+                        <div class="info-item hover:translate-x-2 transition-transform duration-300">
+                            <div class="info-item-icon text-primary">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div class="info-item-content">
-                                <span class="info-label">Location</span>
-                                <p>Dubai, United Arab Emirates</p>
+                                <span class="info-label text-gray-400">Location</span>
+                                <p class="text-light">Dubai, United Arab Emirates</p>
                             </div>
                         </div>
                     </div>
                     
                     <div class="social-links-container">
-                        <h4 class="text-sm font-medium mb-3 text-gray-600">Connect with me</h4>
+                        <h4 class="text-sm font-medium mb-3 text-gray-400">Connect with me</h4>
                         <div class="social-links">
-                            <a href="https://github.com/Shamsear" target="_blank" class="hover:rotate-12 transition-all duration-300 hover:bg-gray-800 hover-glow">
+                            <a href="https://github.com/Shamsear" target="_blank" class="hover:rotate-12 transition-transform duration-300 hover:bg-gray-800 bg-dark-surface text-light">
                                 <i class="fab fa-github"></i>
                             </a>
-                            <a href="https://linkedin.com/in/shamsear/" target="_blank" class="hover:rotate-12 transition-all duration-300 hover:bg-blue-600 hover-glow">
+                            <a href="https://linkedin.com/in/shamsear/" target="_blank" class="hover:rotate-12 transition-transform duration-300 hover:bg-blue-600 bg-dark-surface text-light">
                                 <i class="fab fa-linkedin"></i>
                             </a>
-                            <a href="https://www.instagram.com/shamsear_ebrahim/" target="_blank" class="hover:rotate-12 transition-all duration-300 hover:bg-blue-400 hover-glow">
+                            <a href="https://www.instagram.com/shamsear_ebrahim/" target="_blank" class="hover:rotate-12 transition-transform duration-300 hover:bg-blue-400 bg-dark-surface text-light">
                                 <i class="fab fa-instagram"></i>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="contact-form glass-card stagger-animation">
+                <div class="contact-form shadow-lg backdrop-blur-sm bg-dark-card/90 border border-gray-700">
                     <form id="contactForm" class="space-y-4">
                         <div class="form-row">
                             <div class="form-group flex-1">
                                 <div class="relative">
-                                    <input type="text" id="name" name="name" placeholder=" " required class="peer w-full pt-5 pb-2 px-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
-                                    <label for="name" class="absolute left-3 top-2 text-gray-500 text-xs transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-xs peer-focus:text-primary">Your Name</label>
+                                    <input type="text" id="name" name="name" placeholder=" " required class="peer w-full pt-5 pb-2 px-3 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-dark-surface text-light">
+                                    <label for="name" class="absolute left-3 top-2 text-gray-400 text-xs transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-xs peer-focus:text-primary">Your Name</label>
                                 </div>
                             </div>
                             <div class="form-group flex-1">
                                 <div class="relative">
-                                    <input type="email" id="email" name="email" placeholder=" " required class="peer w-full pt-5 pb-2 px-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
-                                    <label for="email" class="absolute left-3 top-2 text-gray-500 text-xs transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-xs peer-focus:text-primary">Your Email</label>
+                                    <input type="email" id="email" name="email" placeholder=" " required class="peer w-full pt-5 pb-2 px-3 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-dark-surface text-light">
+                                    <label for="email" class="absolute left-3 top-2 text-gray-400 text-xs transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-xs peer-focus:text-primary">Your Email</label>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="relative">
-                                <input type="text" id="subject" name="subject" placeholder=" " required class="peer w-full pt-5 pb-2 px-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
-                                <label for="subject" class="absolute left-3 top-2 text-gray-500 text-xs transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-xs peer-focus:text-primary">Subject</label>
+                                <input type="text" id="subject" name="subject" placeholder=" " required class="peer w-full pt-5 pb-2 px-3 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-dark-surface text-light">
+                                <label for="subject" class="absolute left-3 top-2 text-gray-400 text-xs transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-xs peer-focus:text-primary">Subject</label>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="relative">
-                                <textarea id="message" name="message" placeholder=" " required class="peer w-full pt-5 pb-2 px-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent min-h-[150px] resize-none"></textarea>
-                                <label for="message" class="absolute left-3 top-2 text-gray-500 text-xs transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-xs peer-focus:text-primary">Your Message</label>
+                                <textarea id="message" name="message" placeholder=" " required class="peer w-full pt-5 pb-2 px-3 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-dark-surface text-light min-h-[150px] resize-none"></textarea>
+                                <label for="message" class="absolute left-3 top-2 text-gray-400 text-xs transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-xs peer-focus:text-primary">Your Message</label>
                             </div>
                         </div>
-                        <button type="submit" class="btn primary-btn btn-advanced btn-magnetic w-full flex items-center justify-center gap-2 group hover-lift">
+                        <button type="submit" class="btn primary-btn w-full flex items-center justify-center gap-2 group">
                             <span>Send Message</span>
                             <i class="fas fa-paper-plane group-hover:translate-x-1 transition-transform duration-300"></i>
                         </button>
@@ -664,10 +666,10 @@
         </div>
         
         <!-- Decorative elements -->
-        <div class="hidden md:block absolute top-20 left-10 w-40 h-40 morphing-blob -z-10"></div>
-        <div class="hidden md:block absolute bottom-20 right-10 w-60 h-60 morphing-blob -z-10" style="animation-delay: 4s;"></div>
-        <div class="hidden md:block absolute top-1/3 right-1/4 w-12 h-12 bg-yellow-100 rounded-full opacity-30 -z-10 animate-bounce-slow"></div>
-        <div class="hidden md:block absolute bottom-1/4 left-1/3 w-24 h-24 bg-green-100 rounded-full opacity-20 -z-10 animate-pulse"></div>
+        <div class="hidden md:block absolute top-20 left-10 w-40 h-40 bg-blue-900 rounded-full opacity-10 -z-10"></div>
+        <div class="hidden md:block absolute bottom-20 right-10 w-60 h-60 bg-primary rounded-full opacity-10 -z-10"></div>
+        <div class="hidden md:block absolute top-1/3 right-1/4 w-12 h-12 bg-yellow-700 rounded-full opacity-10 -z-10"></div>
+        <div class="hidden md:block absolute bottom-1/4 left-1/3 w-24 h-24 bg-green-900 rounded-full opacity-10 -z-10"></div>
         
         <!-- Animated pattern background -->
         <div class="hidden lg:block absolute inset-0 -z-20 opacity-5">
@@ -676,41 +678,106 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark relative overflow-hidden glass-card">
+    <footer class="bg-darker relative overflow-hidden">
         <div class="container py-8">
             <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-8">
                 <div class="text-white text-2xl font-bold">
                     Shamsear Ebrahim
-                    <div class="h-1 w-20 bg-primary mt-2 rounded-full animate-pulse"></div>
+                    <div class="h-1 w-20 bg-primary mt-2 rounded-full"></div>
                 </div>
                 <div class="flex gap-4">
-                    <a href="https://github.com/Shamsear" target="_blank" class="text-white hover:text-primary transition-all duration-300 hover-glow">
+                    <a href="https://github.com/Shamsear" target="_blank" class="text-white hover:text-primary transition-colors duration-300">
                         <i class="fab fa-github text-2xl"></i>
                     </a>
-                    <a href="https://linkedin.com/in/shamsear/" target="_blank" class="text-white hover:text-primary transition-all duration-300 hover-glow">
+                    <a href="https://linkedin.com/in/shamsear/" target="_blank" class="text-white hover:text-primary transition-colors duration-300">
                         <i class="fab fa-linkedin text-2xl"></i>
                     </a>
                 </div>
             </div>
-            <div class="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400">&copy; 2025 Shamsear Ebrahim. All Rights Reserved.</p>
+            <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500">&copy; 2025 Shamsear Ebrahim. All Rights Reserved.</p>
                 <div class="flex gap-4 mt-4 md:mt-0">
-                    <a href="#home" class="text-gray-400 hover:text-primary transition-all duration-300 hover-lift">Home</a>
-                    <a href="#about" class="text-gray-400 hover:text-primary transition-all duration-300 hover-lift">About</a>
-                    <a href="#projects" class="text-gray-400 hover:text-primary transition-all duration-300 hover-lift">Projects</a>
-                    <a href="#contact" class="text-gray-400 hover:text-primary transition-all duration-300 hover-lift">Contact</a>
+                    <a href="#home" class="text-gray-500 hover:text-primary transition-colors duration-300">Home</a>
+                    <a href="#about" class="text-gray-500 hover:text-primary transition-colors duration-300">About</a>
+                    <a href="#projects" class="text-gray-500 hover:text-primary transition-colors duration-300">Projects</a>
+                    <a href="#contact" class="text-gray-500 hover:text-primary transition-colors duration-300">Contact</a>
                 </div>
             </div>
         </div>
         
         <!-- Decorative elements -->
-        <div class="absolute top-0 left-0 w-40 h-40 morphing-blob -translate-x-1/2 -translate-y-1/2"></div>
-        <div class="absolute bottom-0 right-0 w-60 h-60 morphing-blob translate-x-1/3 translate-y-1/3" style="animation-delay: 5s;"></div>
+        <div class="absolute top-0 left-0 w-40 h-40 bg-primary opacity-10 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 right-0 w-60 h-60 bg-primary opacity-5 rounded-full translate-x-1/3 translate-y-1/3"></div>
     </footer>
 
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/advanced-interactions.js"></script>
-    <script src="assets/js/micro-interactions.js"></script>
     <script src="assets/js/tailwind-components.js"></script>
+    <script>
+        // Force dark mode
+        document.documentElement.classList.add('dark');
+        
+        // Remove any light mode classes if they exist
+        document.documentElement.classList.remove('light');
+        
+        // Prevent switching back to light mode
+        const forceDarkMode = () => {
+            document.documentElement.classList.add('dark');
+            document.documentElement.classList.remove('light');
+            document.body.classList.add('bg-dark', 'text-light');
+            document.body.classList.remove('bg-white', 'text-dark');
+            
+            // Ensure header stays dark
+            const header = document.querySelector('header');
+            if (header) {
+                header.classList.remove('bg-white/90');
+                header.classList.add('bg-darker/90', 'backdrop-blur-sm');
+            }
+        };
+        
+        // Run initially
+        forceDarkMode();
+        
+        // Also run periodically to ensure dark mode stays
+        setInterval(forceDarkMode, 1000);
+        
+        // Override any scroll event handlers that might change header color
+        document.addEventListener('DOMContentLoaded', function() {
+            // Wait for any other scripts to load
+            setTimeout(() => {
+                // Get the original scroll event if it exists
+                const originalOnScroll = window.onscroll;
+                
+                // Override the scroll event
+                window.onscroll = function(e) {
+                    // Call the original handler if it exists
+                    if (typeof originalOnScroll === 'function') {
+                        originalOnScroll(e);
+                    }
+                    
+                    // Force the header to stay dark
+                    const header = document.querySelector('header');
+                    if (header) {
+                        header.classList.remove('bg-white/90');
+                        header.classList.add('bg-darker/90', 'backdrop-blur-sm');
+                    }
+                };
+                
+                // Also handle any existing event listeners
+                const scrollHandler = () => {
+                    const header = document.querySelector('header');
+                    if (header) {
+                        header.classList.remove('bg-white/90');
+                        header.classList.add('bg-darker/90', 'backdrop-blur-sm');
+                    }
+                };
+                
+                // Add our scroll handler
+                window.addEventListener('scroll', scrollHandler);
+                
+                // Initial call to ensure header is dark
+                scrollHandler();
+            }, 500);
+        });
+    </script>
 </body>
-</html>
+</html> 
