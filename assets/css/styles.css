@@ -318,7 +318,12 @@ nav {
 
 .image-container img {
     width: 100%;
+<<<<<<< Updated upstream
     height: 170%;
+=======
+    height: 200%;
+    object-position: -2px;
+>>>>>>> Stashed changes
     object-fit: cover;
     object-position: right;
     transition: transform 0.5s ease;
